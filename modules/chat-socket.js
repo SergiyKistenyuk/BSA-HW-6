@@ -1,8 +1,8 @@
 module.exports = function (io) {
     io.on('connection', function (socket) {
-        const userService = require('./services/user');
-        const messageService = require('./services/message');
-        const typingUserService = require('./services/typingUser');
+        const userService = require('./../services/user');
+        const messageService = require('./../services/message');
+        const typingUserService = require('./../services/typingUser');
 
         let user = null;
 

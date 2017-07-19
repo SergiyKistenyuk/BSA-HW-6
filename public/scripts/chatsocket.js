@@ -174,6 +174,6 @@ function userExit(disconnectedUser) {
 
 /* Common error handler */
 
-socket.on('errorMsg', function(error){
+socket.on('server-error-message', function(error){
     alert(error);
 });

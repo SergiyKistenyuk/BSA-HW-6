@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chat</title>
+	<link rel="stylesheet" href="./styles/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div id="signup-container" class="container">
+		<form class="form-signin">
+			<h2 class="form-signin-heading">Please sign in</h2>
+			<label class="sr-only" for="inputName">Name</label>
+			<input id="inputName" class="form-control" type="text" placeholder="Name" required="" autofocus="">
+			<label class="sr-only" for="inputNickname">Nickname</label>
+			<input id="inputNickname" class="form-control" type="text" placeholder="Nickname" required="">
+
+			<button id="login-btn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+		</form>
+	</div>
+
+	<div id="wrap">
+		<div id="chat-container">
+			<div id="names">
+				<span class="user-name">User name: </span>
+				<span id="user-name" class="user-name"></span>
+				<span>User nickname: </span>
+				<span class="user-nickname"></span>
+			</div>
+			<form id="message-block" action="">
+				<input id="message" class="form-control" rows="3"></input>
+				<div id="typingUsers"></div>
+				<button id="send-message-btn" class="btn btn-primary" type="submit">Send</button>
+			</form>
+			<div id="chat-block">
+				<div id="users-block">
+					<ul id="users-list">
+						<li id="user-template" class="user">
+							<span class="user-name"></span>
+							<span class="user-nickname"></span>
+							<span class="user-status"></span>
+						</li>
+					</ul>
+				</div>
+				<div id="chat-body">
+					<ul id="chat-content">
+						<li id="message-row-template" class="message-row">
+							<div class="message-sender">
+								<span class="user-name"></span>
+								<span class="user-nickname"></span>
+								<span class="created"></span>
+							</div>
+							<div class="message-body"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="overlay"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="./scripts/chatajax.js"></script>
+</body>
+</html>
