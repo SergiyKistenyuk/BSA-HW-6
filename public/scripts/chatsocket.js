@@ -117,6 +117,10 @@ function renderMessageItem(messageObj) {
         element.className = element.className + ' directMessage';
     }
 
+    if (messageObj.sender.nickname == user.nickname) {
+        element.className = element.className + ' own-message';
+    }
+
     document.getElementById("chat-content").appendChild(element);
 }
 

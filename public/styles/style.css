@@ -124,10 +124,10 @@ h2 {
     word-wrap: break-word;
     border-bottom: 1px dotted grey;
 }
-.message-row:nth-child(2n) {
+.message-row {
     text-align: left;
 }
-.message-row:nth-child(2n-1) {
+.own-message {
     text-align: right;
 }
 .directMessage {
